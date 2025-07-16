@@ -2,7 +2,7 @@ import requests
 import os
 import time
 # Configuration
-API_KEY = "3b8394a77fe048fe85aed0a597795210_405a5f45dd02429fa17c35a01f3aadfb_andoraitools"  # Your API key
+API_KEY = "fdd72d5fbd98452eaf37ba2aef47978f_0a148e37a18e4d378e7a033303629d91_andoraitools"  # Your API key
 BASE_URL = "https://api.lightxeditor.com/external/api/v2"
 
 
