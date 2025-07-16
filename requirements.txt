@@ -3,5 +3,3 @@ werkzeug
 requests
 Pillow
 openai
-time
-json
