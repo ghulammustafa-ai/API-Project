@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Image Generator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <div class="overlay"></div>
+
+  <nav class="navbar">
+    <div class="logo">AI Creative Studio</div>
+    <ul class="nav-links">
+      <li><a href="{{ url_for('home') }}">Home</a></li>
+      <li><a href="{{ url_for('image_generator')}}">Image</a></li>
+      <li><a href="{{ url_for('avatar_transform')}}">Avatar</a></li>
+      
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1>Image Generator</h1>
+    {% if error %}
+      <p style="color:red;">{{ error }}</p>
+    {% endif %}
+    <form action="{{ url_for('image_generator') }}" method="POST" class="buttons">
+      <input type="text" name="prompt" placeholder="Enter your prompt..." required class="prompt-input",auto_complete="off">
+      <button type="submit">Generate Image</button>
+    </form>
+    
+    
+    
+  </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Custom Style Image Generator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <div class="overlay"></div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">AI Creative Studio</div>
+    <ul class="nav-links">
+      <li><a href="{{ url_for('home') }}">Home</a></li>
+      <li><a href="{{ url_for('image_generator')}}">Image</a></li>
+      <li><a href="{{ url_for('avatar_transform')}}">Avatar</a></li>
+      
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1>Custom Style Image Generator</h1>
+
+    <form action="{{ url_for('avatar_transform') }}" method="POST" enctype="multipart/form-data" class="custom-form">
+      <label for="image" style="color: black;">Upload Image:</label>
+      <input type="file" id="image" name="image" accept="image/*" required>
+
+      <label for="styleurl" style="color: black;">Style URL:</label>
+      <input type="text" id="styleurl" name="styleurl" placeholder="Enter style image URL..." >
+
+      <label for="prompt" style="color: black;">Prompt:</label>
+      <input type="text" id="prompt" name="prompt" placeholder="Describe your image..." required>
+
+      <button type="submit">Generate Styled Image</button>
+    </form>
+  </div>
+
+</body>
+</html>

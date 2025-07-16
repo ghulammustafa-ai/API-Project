@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Creative Studio</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="overlay"></div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">AI Creative Studio</div>
+    <ul class="nav-links">
+      <li><a href="{{ url_for('home') }}">Home</a></li>
+      <li><a href="{{ url_for('image_generator')}}">Image</a></li>
+      <li><a href="{{ url_for('avatar_transform')}}">Avatar</a></li>
+      
+    </ul>
+  </nav>
+
+  <div class="container">
+    <img src="{{ url_for('static', filename='robot.png') }}" alt="AI Icon" class="ai-image">
+    <h1 >Welcome to AI Creative Studio</h1>
+    
+    <div class="buttons">
+      <a href="{{ url_for('image_generator') }}"><button id="btn1">AI Image Generator</button></a>
+      <a href="{{ url_for('avatar_transform') }}" ><button id="btn2">AI Avatar Generator</button>
+    </div>
+  </div>
+
+  
+</body>
+</html>

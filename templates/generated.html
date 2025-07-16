@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Generated Image</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <!-- Background Overlay -->
+    <div class="overlay"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">AI Creative Studio</div>
+        <ul class="nav-links">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('image_generator')}}">Image</a></li>
+      <li><a href="{{ url_for('avatar_transform')}}">Avatar</a></li>
+            
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <h1>Generated Image</h1>
+        <p class="tagline">Your AI-generated image is below:</p>
+
+        {% if image_url %}
+            <img src="{{ image_url }}" alt="Generated Image" width="512" height="512" style="border-radius: 15px; box-shadow: 0 0 25px rgba(255,255,255,0.3);">
+        {% else %}
+            <p>No image was generated.</p>
+        {% endif %}
+
+        <div class="buttons">
+            
+            <a href="/"><button>Go to Home</button></a>
+        </div>
+    </main>
+
+</body>
+</html>
