@@ -7,7 +7,7 @@ import time
 # -----------------------------
 def generate_image_from_prompt(prompt):
     text2image_url = 'https://api.lightxeditor.com/external/api/v1/text2image'
-    api_key = '87b1e24549624f7fbefdcad28dc121d3_937bb44022594dcd8103c8453f41703b_andoraitools'
+    api_key = 'fdd72d5fbd98452eaf37ba2aef47978f_0a148e37a18e4d378e7a033303629d91_andoraitools'
 
     headers = {
         'Content-Type': 'application/json',
